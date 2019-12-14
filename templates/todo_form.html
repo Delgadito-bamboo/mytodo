@@ -1,0 +1,15 @@
+{% extends 'base.html'%}
+
+{% block content %}
+        <form action="" method="post">
+                            <div>
+                                    {{ form.as_p }}
+                                    {% csrf_token %}
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">キャンセル</button>
+                                <button type="submit" class="btn btn-primary" >追加</button>
+                            </div>
+         </form>
+
+{% endblock content%}
