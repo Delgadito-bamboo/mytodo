@@ -8,6 +8,10 @@ class TodoListView(ListView):
     template_name = 'todo_list.html'
     context_object_name = 'todo_list'
 
+    def Token(request):
+        ctxt = RequestContext(request, {})
+        return render_to_response("todo_list.html", ctxt)
+
 class CompletedListView(ListView):
     model = Todo
     template_name = 'completed_list.html'

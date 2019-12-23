@@ -29,12 +29,11 @@
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
-                        <form action="" method="post">
+                        <form action="" method="post">{% csrf_token %}
                             <div class="modal-body">
-                                    {{ form.as_p }}
-                                    {% csrf_token %}
-                            {#</div>#}
-                            {#<div class="modal-footer">#}
+                                    {{ todo_form.as_p }}
+                            </div>
+                            <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">キャンセル</button>
                                 <button type="submit" class="btn btn-primary" >追加</button>
                             </div>
